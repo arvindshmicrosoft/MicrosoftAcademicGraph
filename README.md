@@ -21,7 +21,7 @@ The actual bulk load is done by running the ParseAndExplodeBlockingCollection_Fa
 * the number of threads to use (the default is 30)
 
 ## Sample queries
-Basic search is in the 3_BFS.sql file. Pagerank implementation is in 4_PageRank.sql
+Basic search is in the 4_BFS.sql file. Pagerank implementation is in 5_PageRank.sql
 
 # References
 * Jie Tang, Jing Zhang, Limin Yao, Juanzi Li, Li Zhang, and Zhong Su. ArnetMiner: Extraction and Mining of Academic Social Networks. In Proceedings of the Fourteenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (SIGKDD’2008). pp.990-998.
