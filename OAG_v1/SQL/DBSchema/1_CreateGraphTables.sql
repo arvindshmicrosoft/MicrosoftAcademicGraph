@@ -40,7 +40,7 @@ CREATE TABLE [dbo].[Publication](
 	[urls] nvarchar (max) NULL,	-- ADJUST for client-vs-server JSON processing
 	[abstract] [nvarchar](max) NULL,
 	[is_mag] bit,
-	INDEX [GRAPH_UNIQUE_INDEX_Publication] UNIQUE NONCLUSTERED ($node_id) WITH (DATA_COMPRESSION = PAGE),
+	INDEX [GRAPH_UNIQUE_INDEX_Publication] UNIQUE NONCLUSTERED ($node_id),
 	INDEX [CCI_Publication] CLUSTERED COLUMNSTORE
 ) 
 AS NODE
