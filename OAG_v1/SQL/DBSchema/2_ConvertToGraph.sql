@@ -82,6 +82,8 @@ BEGIN
 	ALTER INDEX [GRAPH_FromTo_INDEX_References] ON [dbo].[References] DISABLE
 
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_CollaboratesWith] ON [dbo].[CollaboratesWith] DISABLE
+	ALTER INDEX [NCI_FromTo_CollaboratesWith] ON [dbo].[CollaboratesWith] DISABLE
+	ALTER INDEX [NCI_FromTo_IsAuthorOf] ON [dbo].[IsAuthorOf] DISABLE
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_IsAuthorOf] ON [dbo].[IsAuthorOf] DISABLE
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_InField] ON [dbo].[InField] DISABLE
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_PresentedIn] ON [dbo].[PresentedIn] DISABLE
@@ -96,9 +98,10 @@ BEGIN
 
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_References] ON [dbo].[References] REBUILD  WITH (MAXDOP = 24);
 	ALTER INDEX [GRAPH_FromTo_INDEX_References] ON [dbo].[References] REBUILD  WITH (MAXDOP = 24);
-
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_CollaboratesWith] ON [dbo].[CollaboratesWith] REBUILD  WITH (MAXDOP = 24);
+	ALTER INDEX [NCI_FromTo_CollaboratesWith] ON [dbo].[CollaboratesWith] REBUILD  WITH (MAXDOP = 24);
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_IsAuthorOf] ON [dbo].[IsAuthorOf] REBUILD  WITH (MAXDOP = 24);
+	ALTER INDEX [NCI_FromTo_IsAuthorOf] ON [dbo].[IsAuthorOf] REBUILD  WITH (MAXDOP = 24);
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_InField] ON [dbo].[InField] REBUILD  WITH (MAXDOP = 24);
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_PresentedIn] ON [dbo].[PresentedIn] REBUILD  WITH (MAXDOP = 24);
 	ALTER INDEX [GRAPH_UNIQUE_INDEX_MentionedIn] ON [dbo].[MentionedIn] REBUILD  WITH (MAXDOP = 24);

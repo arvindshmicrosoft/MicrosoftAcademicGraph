@@ -26,9 +26,10 @@ if (!(test-path -path $magzipfolder)) {
 
 for ($index = 0; $index -le 8; $index++)
 {
-    $url = "https://academicgraphv1wu.blob.core.windows.net/aminer/mag_papers_$index.zip"
+    # https://academicgraphv2.blob.core.windows.net/oag-v1/mag/mag_papers_0.zip
+    $url = "https://academicgraphv2.blob.core.windows.net/oag-v1/mag/mag_papers_$index.zip"
     $filename = "mag_papers_$index.zip"
-    Invoke-WebRequest -uri $url -OutFile ($magzipfolder + $filename)
+    if (-not (Test-Path ($magzipfolder + $filename))) { Invoke-WebRequest -uri $url -OutFile ($magzipfolder + $filename) }
 }
 
 invoke-webrequest -uri "http://aka.ms/downloadazcopy" -outfile "azcopy.msi"
